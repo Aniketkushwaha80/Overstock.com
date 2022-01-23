@@ -7,8 +7,8 @@
     <title>Document</title>
     
 </head>
-<link rel="stylesheet" href="./style/product1.css">
-<link rel="stylesheet" href="/landingpage/Landing.css">
+<link rel="stylesheet" href="/product1.css">
+<link rel="stylesheet" href="/Landing.css">
 <body>
     <div id="navbar"></div>
  <h1 id="h11"> Home Decor</h1>
@@ -147,7 +147,7 @@
 </body>
 </html>
 <script type="module">
-    import { navigation, Footer } from "/landingpage/Landing.js"
+    import { navigation, Footer } from "/Landing.js"
 
 let l=navigation()
 document.getElementById("navbar").innerHTML=l
@@ -155,20 +155,20 @@ let f=Footer()
 document.getElementById("footer").innerHTML=f
 
 document.querySelector(".dropbtn").addEventListener("click", function(){
-    window.location.href="/productpage1/furniture.html"
+    window.location.href="/furniture.html"
   })
   document.querySelector("#dropbtn2").addEventListener("click", function(){
-    window.location.href="/productpage1/Rugs.html"
+    window.location.href="/Rugs.html"
   })
   document.querySelector("#dropbtn3").addEventListener("click", function(){
-    window.location.href="/productpage1/decor.html"
+    window.location.href="/decor.html"
   })
 
 
 document.querySelector("#H-last-C").addEventListener("click", cart)
 
 function cart(){
-    window.location.href="/cart/cartshow.html"
+    window.location.href="/cartshow.html"
     console.log("Aniket")
 }
 
@@ -181,7 +181,7 @@ function cartcount(){
 }
 
 document.querySelector("#home").addEventListener("click", function(){
-    window.location.href="/landingpage/Landing.html"
+    window.location.href="/Landing.html"
   })
 
     //search 
@@ -190,12 +190,12 @@ document.getElementById("search-Icon").addEventListener("click",function(){
 let value=document.getElementById("searchbox").value.toLowerCase()
 search.push(value)
 localStorage.setItem("search",JSON.stringify(search))
-window.location.href="/search/search.html"
+window.location.href="/search.html"
 
 
 })
 document.querySelector("#H-last-A").addEventListener("click", function(){
-    window.location.href="/account/account.html"
+    window.location.href="/account.html"
   })
 
   let username= JSON.parse(localStorage.getItem("username"))

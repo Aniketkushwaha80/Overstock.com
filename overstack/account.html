@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Account</title>
-    <link rel="stylesheet" href="/landingpage/Landing.css">
-    <link rel="stylesheet" href="/account/account.css">
+    <link rel="stylesheet" href="/Landing.css">
+    <link rel="stylesheet" href="/account.css">
 </head>
 
 <body>
@@ -106,7 +106,17 @@
 </body>
 </html>
 
-<script>
+<script type="module">
+     
+  import { navigation, Footer } from "/Landing.js"
+
+
+  let l=navigation()
+document.getElementById("navbar").innerHTML=l
+let f=Footer()
+document.getElementById("footer").innerHTML=f
+
+
      document.querySelector("#form1").addEventListener("submit", signUp);
 var userDataBase = JSON.parse(localStorage.getItem("userDataBase")) || [];
 var flag = false;
@@ -186,7 +196,7 @@ function login(event) {
         
         alert('Login Success');
         setTimeout(()=>{
-window.location.href = "/landingpage/Landing.html"
+window.location.href = "/Landing.html"
         },1000)
         
         break;
@@ -209,36 +219,22 @@ window.location.href = "/landingpage/Landing.html"
     // }
   }
 }
-
-
-</script>
-
-<script type="module">
-     
-     import { navigation, Footer } from "/landingpage/Landing.js"
-
-
-     let l=navigation()
-document.getElementById("navbar").innerHTML=l
-let f=Footer()
-document.getElementById("footer").innerHTML=f
-
 document.querySelector(".dropbtn").addEventListener("click", function(){
-  window.location.href="/productpage1/furniture.html"
+  window.location.href="/furniture.html"
 })
 document.querySelector("#dropbtn2").addEventListener("click", function(){
-  window.location.href="/productpage1/Rugs.html"
+  window.location.href="/Rugs.html"
 })
 document.querySelector("#dropbtn3").addEventListener("click", function(){
-  window.location.href="/productpage1/decor.html"
+  window.location.href="/decor.html"
 })
 
 document.querySelector("#H-last-C").addEventListener("click", function(){
-  window.location.href="/cart/cartshow.html"
+  window.location.href="/cartshow.html"
 })
 
 document.querySelector("#H-last").addEventListener("click", function(){
-  window.location.href="/account/account.html"
+  window.location.href="/account.html"
 })
 
 
@@ -247,7 +243,7 @@ document.querySelector("#H-last").addEventListener("click", function(){
  
 
 document.querySelector("#home").addEventListener("click", function(){
-    window.location.href="/landingpage/Landing.html"
+    window.location.href="/Landing.html"
   })
 
     //search 
@@ -256,11 +252,17 @@ document.getElementById("search-Icon").addEventListener("click",function(){
 let value=document.getElementById("searchbox").value.toLowerCase()
 search.push(value)
 localStorage.setItem("search",JSON.stringify(search))
-window.location.href="/search/search.html"
+window.location.href="/search.html"
 
 
 })
+
 </script>
+
+
+
+
+
 
 
 

@@ -268,28 +268,28 @@
 <script type="module">
 
  
-  import { navigation, Footer } from "./Landing.js";
+  import { navigation, Footer } from "/Landing.js";
 
   let div = (document.getElementById("Navigation").innerHTML = navigation());
 
   let Fdiv = (document.getElementById("Footer").innerHTML = Footer());
 
   document.querySelector(".dropbtn").addEventListener("click", function(){
-    window.location.href="/productpage1/furniture.html"
+    window.location.href="/furniture.html"
   })
   document.querySelector("#dropbtn2").addEventListener("click", function(){
-    window.location.href="/productpage1/Rugs.html"
+    window.location.href="/Rugs.html"
   })
   document.querySelector("#dropbtn3").addEventListener("click", function(){
-    window.location.href="/productpage1/decor.html"
+    window.location.href="decor.html"
   })
 
   document.querySelector("#H-last-C").addEventListener("click", function(){
-    window.location.href="/cart/cartshow.html"
+    window.location.href="/cartshow.html"
   })
 
   document.querySelector("#H-last-A").addEventListener("click", function(){
-    window.location.href="/account/account.html"
+    window.location.href="account.html"
   })
 
 
@@ -304,7 +304,7 @@ function cartcount(){
 }
 
 document.querySelector("#home").addEventListener("click", function(){
-    window.location.href="/landingpage/Landing.html"
+    window.location.href="/Landing.html"
   })
 
     //search 
@@ -313,7 +313,7 @@ document.getElementById("search-Icon").addEventListener("click",function(){
 let value=document.getElementById("searchbox").value.toLowerCase()
 search.push(value)
 localStorage.setItem("search",JSON.stringify(search))
-window.location.href="/search/search.html"
+window.location.href="/search.html"
 
 
 })
